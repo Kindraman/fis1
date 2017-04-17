@@ -1,5 +1,5 @@
 
 ## Getting Started
 
--Introducir el contenido correspondiente
--Implementar Dropdown menu
+#Introducir el contenido correspondiente
+#Implementar Dropdown menu
