@@ -1,5 +1,7 @@
 
-## Getting Started
 
-#Introducir el contenido correspondiente
-#Implementar Dropdown menu
+##Integrantes del equipo:
+Cristobal Caipillan
+Cesar Azola
+Antonio Caro
+Manuel Martinez
