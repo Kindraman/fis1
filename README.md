@@ -11,4 +11,4 @@ Ojo con los directorios para referenciar las paginas
 Cristobal Caipillan
 Cesar Azola
 Antonia Caro
-Manuel Martinez
+Manuel MartineZ
