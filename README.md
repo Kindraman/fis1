@@ -4,11 +4,12 @@ Primer Hito
 
 ## Por Hacer
 
-* darle una breve descripcion e informacion a recintos, como titulo, subtitulos, etc.
-* corregir referencias del navbar de cada cancha
-* corregir bug del boton que no pesca o calendario que no funciona (se describe abajo de integrantes como)
-* recinto3 no tiene asignado canchas
-* recinto4 no tiene asignado canchas
+* darle una breve descripcion e informacion a recintos, como titulo, subtitulos, etc. -CRISTOBALS
+* Implementar referencias del navbar de cada cancha - CRISTOBALS 
+* corregir bug del boton que no pesca o calendario que no funciona (se describe abajo de integrantes como) -CESARS
+* Implementar toño's - TOÑOS
+* Implementar Cesar's - CESARS
+* Responder Video - Deatodo
 
 ## Hecho
 * Funciona toda la navegacion del recinto1 y sus canchas (ida/vuelta) - Solucion del Boton bug
@@ -16,7 +17,7 @@ Primer Hito
 
 ### Integrantes
 
-Cristobal Caipillan
+Cristobal Caipillan 
 Cesar Azola
 Antonia Caro
 Manuel MartineZ
