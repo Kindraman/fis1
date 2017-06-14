@@ -1,9 +1,27 @@
+<?php
+require_once("clases/Usuario.php");
+$u = new Usuarios();
+$datos=$u->getDatosG();
+?>
+
+
+<?php
+$nombres =array();
+$descriction =array();
+$imagen =array();
+foreach($datos as $dato){
+    $nombres[] = $dato->Nombre;
+    $descripcion[] = $dato->Descripcion;
+    $imagen[] = $dato->Imagen;
+}
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-
+    
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,10 +45,11 @@
 
 </head>
 
-<body>
 
     <!-- Navigation -->
     <body>
+
+
 
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -42,17 +61,17 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">Inicio</a>
+          <a class="navbar-brand" href="index.php">Inicio</a>
         </div>
         <div id="navbar"  class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Recintos <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="Recintos/recinto1.html">Condor rojas norte</a></li>
-                <li><a href="Recintos/recinto2.html">El Phelps</a></li>
-                <li><a href="Recintos/recinto3.html">El Massu</a></li>
-                <li><a href="Recintos/recinto4.html">El NBA</a></li>
+                <li><a href="Recintos/recinto1.php"><?php echo $nombres[0]?></a></li>
+                <li><a href="Recintos/recinto2.php"><?php echo $nombres[1]?></a></li>
+                <li><a href="Recintos/recinto3.php"><?php echo $nombres[2]?></a></li>
+                <li><a href="Recintos/recinto4.php"><?php echo $nombres[3]?></a></li>
                 
                 
               </ul>
@@ -68,7 +87,7 @@
         <!-- Page Header -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Gimnasio de Recoleta
+                <h1 class="page-header">Gimnasio
                     <small>El gimnasio para ti</small>
                 </h1>
             </div>
@@ -78,22 +97,22 @@
         <!-- Projects Row -->
         <div class="row">
             <div class="col-md-6 portfolio-item">
-                <a href="Recintos/recinto1.html">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                <a href="Recintos/recinto1.php">
+                    <img class="img-responsive" src="<?php echo $imagen[0]?>" alt="">
                 </a>
                 <h3>
-                    <a href="Recintos/recinto1.html">Condor rojas norte</a>
+                    <a href="Recintos/recinto1.php"> <?php echo $nombres[0]?> </a>
                 </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+                <p><?php echo $descripcion[0]?></p>
             </div>
             <div class="col-md-6 portfolio-item">
-                <a href="Recintos/recinto2.html">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                <a href="Recintos/recinto2.php">
+                    <img class="img-responsive" src="<?php echo $imagen[1]?>" alt="">
                 </a>
                 <h3>
-                    <a href="Recintos/recinto2.html">El Phelps</a>
+                    <a href="Recintos/recinto2.php"><?php echo $nombres[1]?></a>
                 </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+                <p><?php echo $descripcion[1]?></p>
             </div>
         </div>
         <!-- /.row -->
@@ -101,22 +120,22 @@
         <!-- Projects Row -->
         <div class="row">
             <div class="col-md-6 portfolio-item">
-                <a href="Recintos/recinto3.html">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                <a href="Recintos/recinto3.php">
+                    <img class="img-responsive" src="<?php echo $imagen[2]?>" alt="">
                 </a>
                 <h3>
-                    <a href="Recintos/recinto3.html">Massu</a>
+                    <a href="Recintos/recinto3.php"><?php echo $nombres[2]?></a>
                 </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+                <p><?php echo $descripcion[2]?></p>
             </div>
             <div class="col-md-6 portfolio-item">
-                <a href="Recintos/recinto4.html">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                <a href="Recintos/recinto4.php">
+                    <img class="img-responsive" src="<?php echo $imagen[3]?>" alt="">
                 </a>
                 <h3>
-                    <a href="Recintos/recinto4.html">NBA</a>
+                    <a href="Recintos/recinto4.php"><?php echo $nombres[3]?></a>
                 </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+                <p><?php echo $descripcion[3]?></p>
             </div>
         </div>
         <!-- /.row -->

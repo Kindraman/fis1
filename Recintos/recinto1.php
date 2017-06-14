@@ -1,3 +1,28 @@
+<?php
+require_once("../clases/Usuario.php");
+$u = new Usuarios();
+$canchas=$u->getDatosC();
+$datos=$u->getDatosG();
+?>
+
+
+<?php
+$nombres =array();
+$descriction =array();
+$imagen =array();
+foreach($datos as $dato){
+    $nombres[] = $dato->Nombre;
+    $descripcion[] = $dato->Descripcion;
+    $imagen[] = $dato->Imagen;
+}
+?>
+
+<?php
+$nombreC =array();
+foreach($canchas as $dato){
+    $nombreC[] = $dato->Nombre;
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -12,12 +37,11 @@
 
     <title>Portfolio Item - Start Bootstrap Template</title>
 
-    <!-- Solucion del boton bug -->
+    <!-- Bootstrap Core CSS -->
+    <!--<link href="css/bootstrap.min.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- Bootstrap Core CSS -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-
     <!-- Custom CSS -->
     <link href="../css/portfolio-item.css" rel="stylesheet">
 
@@ -33,9 +57,6 @@
 <body>
 
     <!-- Navigation -->
-    <body>
-
-    <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="navbar-header">
@@ -45,17 +66,17 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="../index.html">Inicio</a>
+          <a class="navbar-brand" href="../index.php">Inicio</a>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
+        <div id="navbar" " class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Recintos <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="../Recintos/recinto1.html">Condor rojas norte</a></li>
-                <li><a href="../Recintos/recinto2.html">El Phelps</a></li>
-                <li><a href="../Recintos/recinto3.html">El Massu</a></li>
-                <li><a href="../Recintos/recinto4.html">El NBA</a></li>
+                <li><a href="../Recintos/recinto1.php"><?php echo $nombres[0]?></a></li>
+                <li><a href="../Recintos/recinto2.php"><?php echo $nombres[1]?></a></li>
+                <li><a href="../Recintos/recinto3.php"><?php echo $nombres[2]?></a></li>
+                <li><a href="../Recintos/recinto4.php"><?php echo $nombres[3]?></a></li>
                 
                 
               </ul>
@@ -71,8 +92,8 @@
         <!-- Portfolio Item Heading -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">El Phelps
-                    <small>     Se uno con el agua</small>
+                <h1 class="page-header"> <?php echo $nombres[0]?>
+                    <small> Niño maravilla</small>
                 </h1>
             </div>
         </div>
@@ -82,19 +103,17 @@
         <div class="row">
 
             <div class="col-md-8">
-                <img class="img-responsive" src="http://placehold.it/750x500" alt="">
+                
+                    <img class="img-responsive" src="<?php echo $imagen[0]?>" alt="">
+                
             </div>
 
             <div class="col-md-4">
                 <h3>Descripción</h3>
-                <p>Este recinto una única piscina de proporciones olímpicas, cuenta con los mejores
-                estándares de calidad del mercado, así como también de salvavidas profesionales 
-                en caso de cualquier inprevisto. </p>
-                <!--
-                <h3>Project Details</h3>
-                
+                <p><?php echo $descripcion[0]?></p>
+                <!-- <h3>Project Details</h3>
                 <ul>
-                   <li>Lorem Ipsum</li>
+                    <li>Lorem Ipsum</li>
                     <li>Dolor Sit Amet</li>
                     <li>Consectetur</li>
                     <li>Adipiscing Elit</li>
@@ -109,11 +128,21 @@
         <div class="row">
 
             <div class="col-lg-12">
-                <h3 class="page-header">Piscina</h3>
+                <h3 class="page-header">Canchas</h3>
             </div>
 
+            <!-- Cancha1 -->
             <div class="col-sm-3 col-xs-6">
-                <a href="../Canchas/piscina.html">
+                <h4><?php echo $nombreC[0]?></h4>
+                <a href="../Canchas/CFutbol/canchaf1.php">
+                    <img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt="">
+                </a>
+            </div>
+
+            <!-- Cancha2 -->
+            <div class="col-sm-3 col-xs-6">
+                <h4><?php echo $nombreC[1]?></h4>
+                <a href="../Canchas/CFutbol/canchaf2.php">
                     <img class="img-responsive portfolio-item" src="http://placehold.it/500x300" alt="">
                 </a>
             </div>
